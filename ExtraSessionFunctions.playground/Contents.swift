@@ -5,8 +5,10 @@ import UIKit
  sayHello(name: "Omar") // Output:  Hello Omar
  ```
  */
-
-
+func sayHello ( name:String) -> String {
+    return "hello \(name)"
+}
+sayHello(name: "laila")
 
 
 
@@ -20,6 +22,18 @@ import UIKit
 
 ```
 */
+func sayHello2 (name: String , language : String = "english") -> String {
+    if language == "english"{
+        return "hello \(name)"
+    }else if language == "french"{
+        return "bounjour \(name)"
+    }else if language == "turkish"{
+        return "merheba \(name)"
+    }else{
+        return "what language is that??"
+    }
+}
+sayHello2(name: "laila", language: "turkish")
 
 
 
@@ -27,15 +41,13 @@ import UIKit
 
 
 
-
-/*:
-3. Create a function that will take your birth year, and calculates your age
- > ***Bonus!**: Insert months and days.
-```
- calculateAge(birthYear: 1996) // Output: 24
-```
-*/
-
+let me = "2003"
+func myBD (birthYear : Int ) -> Int{
+    let myAge = 2020 - birthYear
+    return myAge
+}
+print(myBD(birthYear: 2003)
+    
 
 
 
@@ -47,6 +59,33 @@ import UIKit
 
 ```
 */
+func meaningOfNames(name : String) -> String {
+   if name == "رتاج" {
+        return "الباب العظيم"
+    }else if name == "حيدر"{
+        return "الاسد الجميل"
+    }else if name == "غدير"{
+       return "المطر"
+    }else {
+       return "هذا الاسم مو موجود"
+    }
+    
+    
+//by switch
+//    switch name {
+//    case "retaj" : return "الباب العظيم"
+//    case "haidar" : return "الاسد الجميل"
+//    case "'3adeer" : return "المطر"
+//    default : return "هذا الاسم مو موجود"
+//
+//    }
+}
+print(meaningOfNames(name: "رتاج"))
+
+
+
+
+
 
 
 
@@ -64,7 +103,15 @@ import UIKit
 
 ```
 */
-
+func bySwitchNames(name : String) -> String {
+    switch name{
+    case "retaj" : return "elbab el3a'9eem"
+    case "haidar" : return "alasad eljameel"
+    case "'3adeer" : return "alma6ar"
+    default: return "no name"
+    }
+    
+}
 
 
 
@@ -77,9 +124,12 @@ import UIKit
  print(randomJoke()) // Output: مرة واحد راح للبقالة قالوه عندك جبنة بيضة قالو لا وهو عنده قوه
  ```
  */
+func funnyJoke() -> String{
+   let jokes = ["مرة واحد راح للبقالة قالوه عندك جبنة بيضة قالو لا وهو عنده قوه" , "في واحد مشى مشى ولقى مشمشه"]
+    return jokes.randomElement()!
+}
 
-
-
+print(funnyJoke())
 
 
 /*:
@@ -91,6 +141,12 @@ import UIKit
 
 ```
 */
+func kilo2Pounds(kilos : Int) -> Double{
+    return Double(kilos)*2.204
+}
+
+print(kilo2Pounds(kilos: 3))
+
 
 
 
@@ -105,7 +161,15 @@ import UIKit
 
 ```
 */
-
+func grades(grade : [Int]) -> [Int]{
+    for mygrade in grade{
+        var over90 : [Int] = []
+        if mygrade > 90 {
+            over90.append(mygrade)
+            
+        };return over90
+    }
+}
 
 
 
@@ -123,6 +187,15 @@ import UIKit
 
 ```
 */
+func poundsToKilos(kilos: [Double]) -> [Double]{
+    var pounds :[Int] = []
+    for kilo in kilos {
+        kilo * 0.453592
+    }
+    pounds.append(pounds)
+}
+print(poundsToKilos(kilos: [2,4,5,7]))
+
 
 
 
